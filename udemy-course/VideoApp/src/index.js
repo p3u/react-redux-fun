@@ -4,6 +4,7 @@ import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
+import _ from 'lodash';
 const YT_API_KEY = 'AIzaSyBho_UpN4VV3GKJx09o5tClVs0yn1EaaOc';
 
 class App extends Component {

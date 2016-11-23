@@ -6,6 +6,7 @@ No redux involved so far.
 
 **Interesting take aways:**  
 Using arrow functions instead of binding method to the class before passing to child component  
+Using `_.debounce`
 
 **ES6 sugars syntaxes:**  
 	When updating object literal `{video}` instead of `{video:video}`  
