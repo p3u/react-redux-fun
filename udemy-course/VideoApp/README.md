@@ -1,25 +1,12 @@
-# ReduxSimpleStarter
+# First project for the Modern React with Redux Udemy course
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+A simple website that fetches videos from youtube api and renders using React.  
+No redux involved so far.  
 
-###Getting Started###
 
-There are two methods for getting started with this repo.
-
-####Familiar with Git?#####
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-	> git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
-	> cd ReduxSimpleStarter
-	> npm install
-	> npm start
-```
-
-####Not Familiar with Git?#####
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-	> npm install
-	> npm start
-```
+*Interesting take aways:*  
+Using arrow functions instead of binding method to the class before passing to child component  
+ES6 sugars syntaxes:  
+	When updating object literal `{video}` instead of `{video:video}`  
+	When receiving object as param `({prop})` instead of reading prop from object
+	`import React, {Component} from 'react'; Componenet` instead of `import React; React.Component`
