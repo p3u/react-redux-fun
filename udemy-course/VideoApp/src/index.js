@@ -35,11 +35,13 @@ class App extends Component {
             I could also make this bind on the constructor in case this
             function was passed to other components */}
         <SearchBar onVideoSearch={this.videoSearch.bind(this)}/>
-        <VideoDetail video={this.state.selectedVideo} />
-        <VideoList
-          // Using arrow functions binds this to the App class
-          onVideoSelect={selectedVideo => this.setState({selectedVideo})}
-          videos={this.state.videos} />
+        <div className="row">
+          <VideoDetail video={this.state.selectedVideo} />
+          <VideoList
+            // Using arrow functions binds this to the App class
+            onVideoSelect={selectedVideo => this.setState({selectedVideo})}
+            videos={this.state.videos} />
+        </div>
       </div>
     );
   };

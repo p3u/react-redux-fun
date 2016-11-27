@@ -1,10 +1,17 @@
+body {
+  background-image: url("http://doges.tk/lib/doges/Mighty%20doge.jpg");
+  background-color: #cccccc;
+}
+
 .search-bar {
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .search-bar input {
-  width: 75%;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .video-item img {
@@ -16,12 +23,23 @@
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  background-color: white;
 }
 
 .list-group-item {
   cursor: pointer;
+  height: 129px;
 }
 
 .list-group-item:hover {
   background-color: #eee;
 }
+
+@media (max-width: 770px) {
+  #video-list {
+    padding-left: 15px;
+  }
+  .video-detail .details {
+    margin-bottom: 10px;
+  }
+ }
