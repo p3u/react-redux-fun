@@ -14,7 +14,7 @@ Reducers are just functions that return a piece of the app state
 They also listen to every action sent to them to decide if they should change the app state
 
 ## How to create and use a reducer?
-1. Create a js file such as *reducer_active_book.js*  
+__Create a js file such as *reducer_active_book.js*__  
 Write a function that returns a piece of state such as:
 ```
 export default function(state = null, action) {
@@ -28,7 +28,7 @@ export default function(state = null, action) {
 
 *This reducer listens to every action. If the action is type BOOK_SELECTED it will return the book that it was passed to him in the property payload*  
 
-2. Wire it to the root reducer  
+**Wire it to the root reducer**
 On reducers/index.js import the reducer and add it to your rootReducer with combineReducers function:
 ```import { combineReducers } from 'redux';
 import ActiveBook from './reducer_active_book';
@@ -40,9 +40,9 @@ const rootReducer = combineReducers({
 export default rootReducer;
 ```
 
-3. Wire it to react
+**Wire it to react**
 With react-redux, promote one of the components as a container (smart component)
-**You should promote the most parent component that should be aware of the state**
+*You should promote the most parent component that should be aware of the state*
 
  ```
  import React, { Component } from 'react';
@@ -81,13 +81,13 @@ With react-redux, promote one of the components as a container (smart component)
 Action creators are functions that dispatch actions to the reducers to see if they have to change the app state
 
 ##How to create Action Creators?
-1. Create a js file such as *actions/index.js*  
+_Create a js file such as *actions/index.js*_
 ```
 export function selectBook(book) {
   console.log(book.title);
 }
 ```
-2. Wire that function to a component
+_Wire that function to a component_
 ```
 import { selectBook } from '../actions/index';
 import { bindActionCreators } from 'redux';
