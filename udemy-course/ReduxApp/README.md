@@ -15,7 +15,7 @@ They also listen to every action sent to them to decide if they should change th
 
 ## How to create and use a reducer?
 __Create a js file such as *reducer_active_book.js*__  
-Write a function that returns a piece of state such as:
+Write a function that returns a piece of state such as:  
 ```
 export default function(state = null, action) {
   switch (action.type) {
@@ -28,8 +28,9 @@ export default function(state = null, action) {
 
 *This reducer listens to every action. If the action is type BOOK_SELECTED it will return the book that it was passed to him in the property payload*  
 
-**Wire it to the root reducer**
-On reducers/index.js import the reducer and add it to your rootReducer with combineReducers function:
+**Wire it to the root reducer**  
+
+On reducers/index.js import the reducer and add it to your rootReducer with combineReducers function:  
 ```import { combineReducers } from 'redux';
 import ActiveBook from './reducer_active_book';
 
