@@ -12,13 +12,17 @@ export default class SearchBar extends Component {
   }
 
   onInputChange(e){
-    e.preventDefault();
     this.setState({term: e.target.value});
+  }
+
+  onFormSubmit(e){
+    e.preventDefault();
+
   }
 
   render() {
     return (
-      <form className="input-group">
+      <form onSubmit={this.onFormSubmit} className="input-group">
         <input
           placeholder="New York"
           onChange={(e) => this.onInputChange(e)}

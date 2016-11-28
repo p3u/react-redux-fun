@@ -1,25 +1,8 @@
-# ReduxSimpleStarter
-
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
-
-###Getting Started###
-
-There are two methods for getting started with this repo.
-
-####Familiar with Git?#####
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-	> git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
-	> cd ReduxSimpleStarter
-	> npm install
-	> npm start
-```
-
-####Not Familiar with Git?#####
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-	> npm install
-	> npm start
-```
+# This context (arrow functions, bind)
+# Controled Components
+# Middlewares
+As always, Middlewares are just functions.  
+They are the gate keepers of Redux.  
+All actions that are created flow through them.  
+They inspect any action and manipulate them before sending them to reducers.  
+They allow us to do some very interesting things
