@@ -81,13 +81,14 @@ With react-redux, promote one of the components as a container (smart component)
 Action creators are functions that dispatch actions to the reducers to see if they have to change the app state
 
 ##How to create Action Creators?
-_Create a js file such as *actions/index.js*_
+**Create a js file such as _actions/index.js_**
 ```
 export function selectBook(book) {
   console.log(book.title);
 }
 ```
-_Wire that function to a component_
+**Wire that function to a component**
+
 ```
 import { selectBook } from '../actions/index';
 import { bindActionCreators } from 'redux';
