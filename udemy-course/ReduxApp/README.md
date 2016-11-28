@@ -15,7 +15,7 @@ They also listen to every action sent to them to decide if they should change th
 
 ## How to create and use a reducer?
 __Create a js file such as *reducer_active_book.js*__  
-Write a function that returns a piece of state such as:
+Write a function that returns a piece of state such as:  
 ```
 export default function(state = null, action) {
   switch (action.type) {
@@ -28,9 +28,11 @@ export default function(state = null, action) {
 
 *This reducer listens to every action. If the action is type BOOK_SELECTED it will return the book that it was passed to him in the property payload*  
 
-**Wire it to the root reducer**
-On reducers/index.js import the reducer and add it to your rootReducer with combineReducers function:
-```import { combineReducers } from 'redux';
+**Wire it to the root reducer**  
+
+On reducers/index.js import the reducer and add it to your rootReducer with combineReducers function:  
+```
+import { combineReducers } from 'redux';
 import ActiveBook from './reducer_active_book';
 
 const rootReducer = combineReducers({
@@ -112,7 +114,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookList);  
-
 ```
 
 #Review points
@@ -124,6 +125,6 @@ export default connect(mapStateToProps, mapDispatchToProps)(BookList);
 5. All reducers are combined on a single one, the rootReducer, using `combineReducers` from `import 'redux'`
 6. Actions are dispatched to all reducers via action creators.
 7. Actions have a type and a paylod
-8. To connnect an action creator with a component, you can use ```connect(mapDispatchToProps)(ComponentName)```
+8. To connnect an action creator with a component, you can use `connect(mapDispatchToProps)(ComponentName)`
 9. Reducers can respond to actions, changing the app state  
-10. New state is injected into containers props with ```connect(mapStateToProps)(SmartComponentName)```
+10. New state is injected into containers props with `connect(mapStateToProps)(SmartComponentName)`
