@@ -4,5 +4,6 @@ export default function() {
     {title: 'Corporate Finance'},
     {title: 'Habibi'},
     {title: 'Blankets'},
+    {title: 'Sapiens'}
   ];
 };
