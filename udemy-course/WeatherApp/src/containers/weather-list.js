@@ -9,12 +9,12 @@ class WeatherList extends Component {
 
     return (
       <tr key={cityData.city.id}>
-        <td>{cityData.city.name}</td>
-        <td><Chart dataList={cityData.list}
+        <td className="col-md-3">{cityData.city.name}</td>
+        <td className="col-md-3"><Chart dataList={cityData.list}
                    attr="temp" opt={{color:'orange'}} /></td>
-        <td><Chart dataList={cityData.list}
+        <td className="col-md-3"><Chart dataList={cityData.list}
                    attr="humidity" opt={{color:'green'}} /></td>
-        <td><Chart dataList={cityData.list}
+        <td className="col-md-3"><Chart dataList={cityData.list}
                    attr="pressure" opt={{color:'gray'}} /></td>
       </tr>
     );
@@ -23,12 +23,12 @@ class WeatherList extends Component {
   render(){
     return (
       <table className="table table-hover">
-        <thead>
+        <thead className="thead-inverse">
           <tr>
-            <th>City</th>
-            <th>Temperature</th>
-            <th>Pressure</th>
-            <th>Humidity</th>
+            <th className="col-md-3">City</th>
+            <th className="col-md-3">Temperature</th>
+            <th className="col-md-3">Pressure</th>
+            <th className="col-md-3">Humidity</th>
           </tr>
         </thead>
         <tbody>
