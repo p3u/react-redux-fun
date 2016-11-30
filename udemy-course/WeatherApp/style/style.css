@@ -1,0 +1,12 @@
+.table td {
+   text-align: center;
+}
+
+.table th {
+  text-align: center;
+}
+
+
+.input-group {
+  margin: 20px 0;
+}
