@@ -17,11 +17,11 @@ class WeatherList extends Component {
       <tr key={cityData.city.id}>
         <td className="col-md-3">{cityData.city.name}</td>
         <td className="col-md-3"><Chart dataList={tempData}
-                   unity='°C' opt={{color:'orange'}} /></td>
+                   unit='°C' opt={{color:'orange'}} /></td>
         <td className="col-md-3"><Chart dataList={pressureData}
-                   unity='hPa' opt={{color:'green'}} /></td>
+                   unit='hPa' opt={{color:'green'}} /></td>
         <td className="col-md-3"><Chart dataList={humidityData}
-                   unity='%' opt={{color:'gray'}} /></td>
+                   unit='%' opt={{color:'gray'}} /></td>
       </tr>
     );
   }
