@@ -4,18 +4,24 @@ import Chart from '../components/chart';
 
 class WeatherList extends Component {
 
+  // This should go to Weather list so this graph is more reusable
+
+
   renderWeatherRow(cityData){
 
+    const tempData = cityData.list.map(d => (d.main['temp'] - 273.15));
+    const pressureData = cityData.list.map(d => d.main['pressure']);
+    const humidityData = cityData.list.map(d => d.main['humidity']);
 
     return (
       <tr key={cityData.city.id}>
         <td className="col-md-3">{cityData.city.name}</td>
-        <td className="col-md-3"><Chart dataList={cityData.list}
-                   attr="temp" opt={{color:'orange'}} /></td>
-        <td className="col-md-3"><Chart dataList={cityData.list}
-                   attr="humidity" opt={{color:'green'}} /></td>
-        <td className="col-md-3"><Chart dataList={cityData.list}
-                   attr="pressure" opt={{color:'gray'}} /></td>
+        <td className="col-md-3"><Chart dataList={tempData}
+                   unity='°C' opt={{color:'orange'}} /></td>
+        <td className="col-md-3"><Chart dataList={pressureData}
+                   unity='hPa' opt={{color:'green'}} /></td>
+        <td className="col-md-3"><Chart dataList={humidityData}
+                   unity='%' opt={{color:'gray'}} /></td>
       </tr>
     );
   }
