@@ -23,7 +23,7 @@ export default function Chart(props) {
   let numberDisplay = '';
   if (opt.dispNum) {
     let number = opt.dispNum(props.dataList);
-    numberDisplay = <div>{number} {props.unity}</div>;
+    numberDisplay = <div>{number} {props.unit}</div>;
   }
 
   return (
