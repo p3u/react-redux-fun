@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Chart from '../components/chart';
+import Map from '../components/map';
 
 class WeatherList extends Component {
-
-  // This should go to Weather list so this graph is more reusable
-
 
   renderWeatherRow(cityData){
 
@@ -15,7 +13,9 @@ class WeatherList extends Component {
 
     return (
       <tr key={cityData.city.id}>
-        <td className="col-md-3">{cityData.city.name}</td>
+        <td className="col-md-3">
+          {cityData.city.name} 
+        </td>
         <td className="col-md-3"><Chart dataList={tempData}
                    unit='°C' opt={{color:'orange'}} /></td>
         <td className="col-md-3"><Chart dataList={pressureData}
