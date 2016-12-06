@@ -21,7 +21,7 @@ export default (
 );
 ```
 Note: The greet Route is nested inside / Route.  
-Note2: IndexRoute is the default if nothing else is passed after the parent Route.
+Note2: IndexRoute is the default if nothing else is passed after the parent Route.no
 
 On index.js, create the Router component inside your root component:  
 ```
