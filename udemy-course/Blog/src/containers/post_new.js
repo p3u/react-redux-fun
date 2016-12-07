@@ -1,12 +1,25 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { createPost } from '../actions/index';
 import { Link } from 'react-router';
 
 class PostNew extends Component {
 
+  // Getting this.context.router so we can user router.push
+  // Avoid using context on React
+  static contextTypes = {
+    router: PropTypes.object
+  };
+
   hasDanger = function(field) {
     return field.touched && field.invalid ? 'has-danger' : '';
+  }
+
+  onSubmit(props) {
+    this.props.createPost(props)
+      .then(() => {
+        this.context.router.push('/');
+      });
   }
 
   render(){
@@ -14,7 +27,7 @@ class PostNew extends Component {
             handleSubmit } = this.props;
 
     return (
-      <form onSubmit={handleSubmit(this.props.createPost)}>
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <h1>Create a New Post</h1>
         <div className={`form-group ${this.hasDanger(title)}`}>
           <label htmlFor="title">Title</label>
