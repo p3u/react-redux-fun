@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchPosts } from '../actions/index';
 import { Link } from 'react-router';
+import PostSnippet from '../components/post_snippet';
 
 class PostsIndex extends Component {
   constructor(props) {
@@ -13,8 +14,13 @@ class PostsIndex extends Component {
     this.props.fetchPosts();
   }
 
-  render() {
+  renderPosts(posts){
+    return posts.map((post) => {
+      return <PostSnippet post={post} key={post.id} />
+    });
+  }
 
+  render() {
     return (
       <div>
         <div className="text-right ">
@@ -22,7 +28,10 @@ class PostsIndex extends Component {
             Add a Post
           </Link>
         </div>
-        {this.props.posts.length > 0 ? this.props.posts[0].title : ""}
+        <h3>Posts:</h3>
+        <div className ="list-group">
+          {this.renderPosts(this.props.posts)}
+        </div>
       </div>
     );
   }
